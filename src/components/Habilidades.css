@@ -1,0 +1,47 @@
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.habilidade-card {
+    background: var(--cor-fundo-card);
+    padding: 35px 20px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.habilidade-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--cor-primaria);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.15);
+}
+
+.habilidade-card h3 {
+    margin-bottom: 10px;
+    cursor: default;
+}
+
+.nivel {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+    background: rgba(99, 102, 241, 0.15);
+    padding: 5px 14px;
+    border-radius: 20px;
+    cursor: default;
+}
+
+/* npm install react-icons */
+.habilidade-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: var(--cor-primaria);
+    transition: transform 0.3s;
+}
+
+.habilidade-card:hover .habilidade-icon {
+    transform: scale(1.2) rotate(5deg);
+}

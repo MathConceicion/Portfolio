@@ -1,0 +1,38 @@
+:root {
+    --cor-primaria: #6366f1;
+    --cor-secundaria: #8b5cf6;
+    --cor-fundo: #0f172a;
+    --cor-fundo-card: #1e293b;
+    --cor-texto: #f1f5f9;
+    --cor-texto-secundario: #94a3b8;
+}
+
+.sobre-conteudo {
+    max-width: 100%;
+    text-align: left;
+}
+
+.sobre-texto p {
+    font-size: 18px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 20px;
+}
+
+.sobre-dados {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.sobre-dados div span {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+.sobre-dados div p {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+}

@@ -1,0 +1,118 @@
+:root {
+  --cor-primaria: #6366f1;
+  --cor-secundaria: #8b5cf6;
+  --cor-fundo: #0f172a;
+  --cor-fundo-card: #1e293b;
+  --cor-texto: #f1f5f9;
+  --cor-texto-secundario: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+.section-padrao {
+  padding: 80px 10%;
+}
+
+.titulo-secao {
+  font-size: 36px;
+  text-align: left;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.titulo-secao::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--cor-primaria);
+  margin: 15px 0 0;
+  border-radius: 2px;
+}
+
+/* Foto do Hero */
+.foto-perfil {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--cor-primaria);
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+}
+
+/* Foto do Sobre */
+.sobre-foto-container {
+  margin-bottom: 30px;
+}
+
+.sobre-foto {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 3px solid var(--cor-primaria);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: left;
+    padding-top: 120px;
+  }
+
+  .hero-botoes {
+    justify-content: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .circulo-decorativo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .sobre-dados {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .section-padrao {
+    padding: 60px 5%;
+  }
+
+  .foto-perfil {
+    width: 250px;
+    height: 250px;
+  }
+
+  .sobre-foto {
+    width: 200px;
+    height: 200px;
+  }
+
+  .footer {
+    padding: 40px 5%;
+  }
+}
