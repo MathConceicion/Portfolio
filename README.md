@@ -1,13 +1,12 @@
 # 🚀 Meu Portfólio
 
-<div align="center">
+<div align="center" style="background: #0f172a; padding: 20px; border-radius: 20px;">
 
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github%20pages&logoColor=white)](https://pages.github.com/)
+### 🖼️ Preview do Projeto
 
-<img src="./public/projeto3.jpg" alt="Preview do Portfólio" width="800px"/>
+<img src="./public/projeto3.jpg" width="800px" style="border-radius: 12px; border: 2px solid #6366f1;" />
+
+> 🎨 **Design System**: Tema escuro com accent em indigo/violet
 
 </div>
 
