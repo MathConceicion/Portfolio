@@ -17,7 +17,7 @@ function Contato() {
             },
             {
                   nome: "Discord",
-                  link: "https://discord.com",
+                  link: "https://discord.com/users/645666775647911",
                   icon: <FaDiscord />
             },
             {
