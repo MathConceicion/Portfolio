@@ -1,6 +1,6 @@
 # 🚀 Meu Portfólio
 
-<div align="center" style="background: #0f172a; padding: 20px; border-radius: 20px;">
+<div align="start" style="background: #0f172a; padding: 20px; border-radius: 20px;">
 
 ### 🖼️ Preview do Projeto
 
@@ -9,6 +9,8 @@
 > 🎨 **Design System**: Tema escuro com accent em indigo/violet
 
 </div>
+
+<br/>
 
 ## 📋 Sobre o Projeto
 
