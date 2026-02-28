@@ -32,6 +32,11 @@ Portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e exp
 - **Vite** - Build tool rápida e moderna
 - **GitHub Pages** - Hospedagem gratuita e integrada
 
+## Hospedagem
+
+O projeto pode se encontrar neste link:
+https://portfolio-sable-pi-66.vercel.app
+
 ## 🚀 Como Executar
 
 Pré-requisitos
