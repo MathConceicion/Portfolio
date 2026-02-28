@@ -89,6 +89,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 350px;
+    width: 100%;
+}
+
+.foto-perfil {
+    width: 90%;
+    max-width: 45vw;
+    min-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid var(--cor-primaria);
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+    object-fit: cover;
+    aspect-ratio: 1;
 }
 
 .circulo-decorativo {
@@ -98,4 +112,93 @@
     background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
     opacity: 0.2;
     filter: blur(60px);
+}
+
+/* Responsivo - Tablets */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 80px 8% 40px;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .foto-perfil {
+        max-width: 300px;
+    }
+}
+
+/* Responsivo - Mobile */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 60px 5% 40px;
+        gap: 40px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-conteudo {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero-descricao {
+        font-size: 16px;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    .hero-imagem {
+        order: -1;
+    }
+
+    .foto-perfil {
+        max-width: 250px;
+    }
+}
+
+/* Responsivo - Celulares pequenos */
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 5% 30px;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero-descricao {
+        font-size: 14px;
+    }
+
+    .btn-primario,
+    .btn-secundario {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .foto-perfil {
+        max-width: 200px;
+    }
 }
