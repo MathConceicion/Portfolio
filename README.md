@@ -41,11 +41,11 @@ Pré-requisitos
 ## Instalação
 
 # Clone o repositório
-git clone https://github.com/MathConceicion/Portfolio.git
+**git** clone https://github.com/MathConceicion/Portfolio.git
 # Instale as dependências
-npm install
+**npm** install
 # Execute o servidor de desenvolvimento
-npm run dev
+**npm** run dev
 
 <div align="center">
 Feito com 💜 por Matheus Conceicion
