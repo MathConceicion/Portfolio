@@ -50,14 +50,14 @@ function Projetos() {
                   };
             } else if (diff === 1 || diff === -(projetos.length - 1)) {
                   return {
-                        transform: 'translateX(120%) scale(0.85) rotateY(-5deg)',
-                        opacity: 0.5,
+                        transform: 'translateX(60%) scale(0.88) rotateY(-4deg)',
+                        opacity: 0.6,
                         zIndex: 2
                   };
             } else if (diff === -1 || diff === (projetos.length - 1)) {
                   return {
-                        transform: 'translateX(-120%) scale(0.85) rotateY(5deg)',
-                        opacity: 0.5,
+                        transform: 'translateX(-60%) scale(0.88) rotateY(4deg)',
+                        opacity: 0.6,
                         zIndex: 2
                   };
             } else {

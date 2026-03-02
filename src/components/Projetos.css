@@ -1,12 +1,12 @@
-/* Container */
 .carrossel-wrapper {
     position: relative;
-    max-width: 900px;
+    /* allow more room so side cards are not visually cropped */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 0 80px;
+    padding: 40px 5% 80px;
+    overflow: visible;
 }
 
-/* Stage */
 .carrossel-stage {
     position: relative;
     height: 540px;
@@ -14,9 +14,10 @@
     align-items: center;
     justify-content: center;
     perspective: 1000px;
+    /* allow the transformed cards to be visible so they don't get abruptly cropped */
+    overflow: visible;
 }
 
-/* Cards com 3D sutil */
 .projeto-card {
     position: absolute;
     width: 100%;
@@ -38,7 +39,6 @@
     border-color: rgba(99, 102, 241, 0.3);
 }
 
-/* Imagem com efeitos */
 .projeto-imagem {
     position: relative;
     height: 240px;
@@ -57,7 +57,6 @@
     transform: scale(1.08);
 }
 
-/* Shine effect */
 .image-shine {
     position: absolute;
     top: 0;
@@ -76,7 +75,6 @@
     left: 150%;
 }
 
-/* Overlay para cards inativos */
 .card-overlay {
     position: absolute;
     inset: 0;
@@ -117,7 +115,6 @@
     transform: scale(1.1) !important;
 }
 
-/* Info refinada */
 .projeto-info {
     padding: 28px;
     text-align: left;
@@ -152,7 +149,6 @@
     line-height: 1.6;
 }
 
-/* Techs com glow */
 .projeto-techs {
     display: flex;
     gap: 8px;
@@ -177,7 +173,6 @@
     box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
 }
 
-/* Links com ícones */
 .projeto-links {
     display: flex;
     gap: 12px;
@@ -235,7 +230,6 @@
     transition: transform 0.6s;
 }
 
-/* Navegação elegante */
 .nav-btn {
     position: absolute;
     top: 50%;
@@ -275,7 +269,6 @@
     right: 30px;
 }
 
-/* Dots estilizados */
 .carrossel-dots {
     position: absolute;
     bottom: 0;
@@ -325,7 +318,7 @@
     transform: scale(1.2);
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
     .carrossel-wrapper {
         padding: 20px 0 70px;
@@ -351,10 +344,12 @@
 
     .nav-btn.prev {
         left: 5px;
+        top: calc(50% - 40px);
     }
 
     .nav-btn.next {
         right: 5px;
+        top: calc(50% - 40px);
     }
 
     .projeto-info {

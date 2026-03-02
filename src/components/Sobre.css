@@ -36,3 +36,19 @@
     color: var(--cor-texto-secundario);
     font-size: 14px;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-dados {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sobre-dados div span {
+        font-size: 28px;
+    }
+
+    .sobre-dados div p {
+        font-size: 12px;
+    }
+}

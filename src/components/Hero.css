@@ -89,7 +89,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 350px;
+    /* remove fixed minimum width to avoid overflow on narrow screens */
     width: 100%;
 }
 
@@ -166,6 +166,8 @@
 
     .hero-imagem {
         order: -1;
+        /* allow shrinking on small devices */
+        min-width: 0;
     }
 
     .foto-perfil {
@@ -196,6 +198,7 @@
     .btn-secundario {
         padding: 10px 20px;
         font-size: 14px;
+        text-align: center;
     }
 
     .foto-perfil {

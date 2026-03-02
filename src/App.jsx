@@ -6,6 +6,7 @@ import Habilidades from './components/Habilidades';
 import Projetos from './components/Projetos';
 import Contato from './components/Contato';
 import Footer from './components/Footer';
+import Reveal from './components/Reveal';
 import './App.css';
 
 function App() {
@@ -13,11 +14,11 @@ function App() {
     <>
       <Header />
       <main>
-        <Hero />
-        <Sobre />
-        <Habilidades />
-        <Projetos />
-        <Contato />
+        <Reveal><Hero /></Reveal>
+        <Reveal><Sobre /></Reveal>
+        <Reveal><Habilidades /></Reveal>
+        <Reveal><Projetos /></Reveal>
+        <Reveal><Contato /></Reveal>
       </main>
       <Footer />
     </>
