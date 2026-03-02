@@ -32,6 +32,11 @@ Portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e exp
 - **Vite** - Build tool rápida e moderna
 - **GitHub Pages** - Hospedagem gratuita e integrada
 
+## Hospedagem
+
+O projeto pode se encontrar neste link:
+https://portfolio-sable-pi-66.vercel.app
+
 ## 🚀 Como Executar
 
 Pré-requisitos
@@ -41,11 +46,11 @@ Pré-requisitos
 ## Instalação
 
 # Clone o repositório
-git clone https://github.com/MathConceicion/Portfolio.git
+**git** clone https://github.com/MathConceicion/Portfolio.git
 # Instale as dependências
-npm install
+**npm** install
 # Execute o servidor de desenvolvimento
-npm run dev
+**npm** run dev
 
 <div align="center">
 Feito com 💜 por Matheus Conceicion
