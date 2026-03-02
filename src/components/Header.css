@@ -54,6 +54,10 @@
     cursor: pointer;
 }
 
+.menu-btn:focus {
+    outline: none;
+}
+
 
 @media (max-width: 768px) {
 
