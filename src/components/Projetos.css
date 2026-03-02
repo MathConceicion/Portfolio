@@ -262,6 +262,7 @@
 .nav-btn {
     width: 55px;
     height: 55px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-btn.prev {

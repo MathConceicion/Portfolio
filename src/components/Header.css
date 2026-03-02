@@ -52,6 +52,9 @@
     border: none;
     color: white;
     cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .menu-btn:focus {
@@ -63,6 +66,7 @@
 
     .menu-btn {
         display: block;
+
     }
 
     .nav {
