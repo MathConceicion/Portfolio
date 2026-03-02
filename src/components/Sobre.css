@@ -39,9 +39,15 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+
     .sobre-dados {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
+    }
+
+    .sobre-dados div:nth-child(3) {
+        grid-column: span 2;
     }
 
     .sobre-dados div span {

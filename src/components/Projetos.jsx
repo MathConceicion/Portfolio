@@ -7,7 +7,7 @@ function Projetos() {
       const projetos = [
             {
                   nome: 'Landing Page',
-                  descricao: 'Página de apresentação responsiva usando HTML e CSS',
+                  descricao: 'Página de apresentação responsiva usando HTML e C#',
                   techs: ['HTML', 'C#'],
                   imagem: '/projeto1.jpg',
                   link: '#',
@@ -26,8 +26,16 @@ function Projetos() {
                   descricao: 'Este site que você está vendo, feito com React',
                   techs: ['React', 'CSS'],
                   imagem: '/projeto3.jpg',
-                  link: '#',
-                  github: 'https://github.com/MathConceicion/Front-End/tree/ebc98562ac9e5a21e22c471d84c54a0dffcb21b7/React/Portfolio'
+                  link: 'https://conceicionportfolio.vercel.app',
+                  github: 'https://github.com/MathConceicion/Portfolio'
+            },
+            {
+                  nome: 'Torneio de Guilty Gear Strive',
+                  descricao: 'Site de torneio improvisado para o jogo Guilty Gear Strive',
+                  techs: ['HTML', 'CSS'],
+                  imagem: '/projeto4.jpg',
+                  link: 'https://projeto2-pearl-rho.vercel.app/index.html',
+                  github: 'https://github.com/MathConceicion/Projeto2'
             }
       ];
 

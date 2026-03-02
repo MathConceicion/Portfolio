@@ -1,6 +1,5 @@
 .carrossel-wrapper {
     position: relative;
-    /* allow more room so side cards are not visually cropped */
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 5% 80px;
@@ -14,7 +13,6 @@
     align-items: center;
     justify-content: center;
     perspective: 1000px;
-    /* allow the transformed cards to be visible so they don't get abruptly cropped */
     overflow: visible;
 }
 
@@ -261,6 +259,11 @@
     transform: translateY(-50%) scale(0.95);
 }
 
+.nav-btn {
+    width: 55px;
+    height: 55px;
+}
+
 .nav-btn.prev {
     left: 30px;
 }
@@ -340,6 +343,11 @@
         width: 42px;
         height: 42px;
         top: 90px;
+    }
+
+    .nav-btn {
+        width: 52px;
+        height: 52px;
     }
 
     .nav-btn.prev {
