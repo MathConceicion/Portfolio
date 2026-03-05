@@ -5,6 +5,8 @@
   --cor-fundo-card: #1e293b;
   --cor-texto: #f1f5f9;
   --cor-texto-secundario: #94a3b8;
+  -webkit-tap-highlight-color: transparent;
+
 }
 
 * {
@@ -42,7 +44,7 @@ body {
 .titulo-secao {
   font-size: 36px;
   text-align: left;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   position: relative;
 }
 
