@@ -1,5 +1,5 @@
 import React from 'react';
-import './Sobre.css';
+import './components-styles/Sobre.css';
 
 function Sobre() {
       return (
@@ -8,12 +8,13 @@ function Sobre() {
                   <div className="sobre-conteudo">
                         <div className="sobre-texto">
                               <p>
-                                    Sou estudante do <strong>SENAI</strong>, apaixonado por tecnologia e desenvolvimento web.
-                                    Estou em constante aprendizado, buscando me tornar um desenvolvedor full-stack.
+                                    Sou estudante de desenvolvimento web no <strong>SENAI</strong>, apaixonado por tecnologia e pela criação de experiências digitais modernas.
                               </p>
                               <p>
-                                    Meu objetivo é criar soluções que façam a diferença na vida das pessoas,
-                                    combinando design atraente com funcionalidade robusta.
+                                    Atualmente estou focado em evoluir como desenvolvedor full-stack, desenvolvendo projetos práticos com JavaScript, React e Node.js.
+                              </p>
+                              <p>
+                                    Meu objetivo é criar aplicações que combinem design intuitivo, performance e boas práticas de desenvolvimento, gerando impacto real para usuários e empresas.
                               </p>
                               <div className="sobre-dados">
                                     <div>

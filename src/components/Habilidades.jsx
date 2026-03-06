@@ -1,5 +1,5 @@
 import React from 'react';
-import './Habilidades.css';
+import './components-styles/Habilidades.css';
 
 import {
       FaHtml5,

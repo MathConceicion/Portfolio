@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Projetos.css';
+import './components-styles/Projetos.css';
 
 function Projetos() {
       const [currentIndex, setCurrentIndex] = useState(0);

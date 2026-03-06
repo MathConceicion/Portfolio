@@ -1,11 +1,12 @@
 import React, { useState, useRef } from 'react';
-import './Contato.css';
+import './components-styles/Contato.css';
 import emailjs from '@emailjs/browser';
 
 import {
       FaEnvelope,
       FaDiscord,
-      FaGithub
+      FaGithub,
+      FaLinkedin
 } from "react-icons/fa";
 
 emailjs.init('3X7KGNSNeeeJJJRHE');
@@ -35,6 +36,11 @@ function Contato() {
                   nome: "GitHub",
                   link: "https://github.com/MathConceicion",
                   icon: <FaGithub />
+            },
+            {
+                  nome: "LinkedIn",
+                  link: "https://www.linkedin.com/in/matheus-conceição-9b1a7224b/",
+                  icon: <FaLinkedin />
             }
       ];
 
