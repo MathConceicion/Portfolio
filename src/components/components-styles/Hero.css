@@ -89,7 +89,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* remove fixed minimum width to avoid overflow on narrow screens */
     width: 100%;
 }
 
