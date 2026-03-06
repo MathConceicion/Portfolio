@@ -4,7 +4,7 @@
 
 ### 🖼️ Preview do Projeto
 
-<img src="./public/projeto3.jpg" width="800px" style="border-radius: 12px; border: 2px solid #6366f1;" />
+<img src="./public/projects/projeto3.jpg" width="800px" style="border-radius: 12px; border: 2px solid #6366f1;" />
 
 > 🎨 **Design System**: Tema escuro com accent em indigo/violet
 
