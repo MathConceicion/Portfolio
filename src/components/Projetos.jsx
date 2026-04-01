@@ -1,105 +1,47 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './components-styles/Projetos.css';
 
 function Projetos() {
       const [currentIndex, setCurrentIndex] = useState(0);
+      const { t } = useTranslation();
+
+      // Dados estáticos (links, imagens, techs, stats) mesclados com traduções
+      const projetosT = t("projetos.items", { returnObjects: true });
 
       const projetos = [
-            {
-                  nome: 'Landing Page',
-                  descricao: 'Página de apresentação responsiva usando HTML e C#',
-                  descricaoLonga: 'Landing page moderna com design responsivo, formulários de contato integrados e animações suaves. Desenvolvida com foco em conversão e performance.',
-                  features: ['Design Responsivo', 'Formulários Integrados', 'Animações CSS', 'Otimização SEO'],
-                  techs: ['HTML', 'C#'],
-                  imagem: './projects/projeto1.jpg',
-                  link: '#',
-                  github: 'https://github.com/MathConceicion/LandingPage.git',
-                  stats: { views: '-', likes: '-' }
-            },
-            {
-                  nome: 'Task Master',
-                  descricao: 'Lista de tarefas interativa com JavaScript puro',
-                  descricaoLonga: 'Aplicação completa de gerenciamento de tarefas com persistência local, filtros dinâmicos e interface intuitiva. Zero dependências externas.',
-                  features: ['Drag & Drop', 'Local Storage', 'Filtros Aplicados', 'Modo Escuro/Claro'],
-                  techs: ['HTML', 'CSS', 'JS'],
-                  imagem: './projects/projeto2.jpg',
-                  link: '#',
-                  github: 'https://github.com/MathConceicion/TaskMaster.git',
-                  stats: { views: '-', likes: '-' }
-            },
-            {
-                  nome: 'Portfólio',
-                  descricao: 'Este site que você está vendo, feito com React',
-                  descricaoLonga: 'Site pessoal com animações avançadas, carrossel 3D customizado e design moderno. Totalmente responsivo e otimizado para performance.',
-                  features: ['Carrossel 3D', 'Animações', 'Design Responsivo', 'Otimizado'],
-                  techs: ['React', 'CSS'],
-                  imagem: './projects/projeto3.jpg',
-                  link: 'https://conceicionportfolio.vercel.app',
-                  github: 'https://github.com/MathConceicion/Portfolio',
-                  stats: { views: '-', likes: '-' }
-            },
-            {
-                  nome: 'Torneio GGS',
-                  descricao: 'Site de torneio para Guilty Gear Strive',
-                  descricaoLonga: 'Plataforma de gerenciamento de torneios de fighting games com brackets, rankings e sistema de inscrição em tempo real.',
-                  features: ['Brackets Automáticos', 'Rankings', 'Inscrição Online', 'Streaming Integrado'],
-                  techs: ['HTML', 'CSS'],
-                  imagem: './projects/projeto4.jpg',
-                  link: 'https://projeto2-pearl-rho.vercel.app/index.html',
-                  github: 'https://github.com/MathConceicion/Projeto2',
-                  stats: { views: '-', likes: '-' }
-            }
+            { ...projetosT[0], techs: ['HTML', 'C#'], imagem: './projects/projeto1.jpg', link: '#', github: 'https://github.com/MathConceicion/LandingPage.git', stats: { views: '-', likes: '-' } },
+            { ...projetosT[1], techs: ['HTML', 'CSS', 'JS'], imagem: './projects/projeto2.jpg', link: '#', github: 'https://github.com/MathConceicion/TaskMaster.git', stats: { views: '-', likes: '-' } },
+            { ...projetosT[2], techs: ['React', 'CSS'], imagem: './projects/projeto3.jpg', link: 'https://conceicionportfolio.vercel.app', github: 'https://github.com/MathConceicion/Portfolio', stats: { views: '-', likes: '-' } },
+            { ...projetosT[3], techs: ['HTML', 'CSS'], imagem: './projects/projeto4.jpg', link: 'https://projeto2-pearl-rho.vercel.app/index.html', github: 'https://github.com/MathConceicion/Projeto2', stats: { views: '-', likes: '-' } },
       ];
 
       const projetoAtivo = projetos[currentIndex];
 
-      const nextSlide = () => {
-            setCurrentIndex((prev) => (prev + 1) % projetos.length);
-      };
-
-      const prevSlide = () => {
-            setCurrentIndex((prev) => (prev - 1 + projetos.length) % projetos.length);
-      };
+      const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % projetos.length);
+      const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + projetos.length) % projetos.length);
 
       const getCardStyle = (index) => {
             const diff = index - currentIndex;
-
             if (diff === 0) {
-                  return {
-                        transform: 'translateX(0) scale(1)',
-                        opacity: 1,
-                        zIndex: 3
-                  };
+                  return { transform: 'translateX(0) scale(1)', opacity: 1, zIndex: 3 };
             } else if (diff === 1 || diff === -(projetos.length - 1)) {
-                  return {
-                        transform: 'translateX(50%) scale(0.85) rotateY(-5deg)',
-                        opacity: 0.5,
-                        zIndex: 2
-                  };
+                  return { transform: 'translateX(50%) scale(0.85) rotateY(-5deg)', opacity: 0.5, zIndex: 2 };
             } else if (diff === -1 || diff === (projetos.length - 1)) {
-                  return {
-                        transform: 'translateX(-50%) scale(0.85) rotateY(5deg)',
-                        opacity: 0.5,
-                        zIndex: 2
-                  };
+                  return { transform: 'translateX(-50%) scale(0.85) rotateY(5deg)', opacity: 0.5, zIndex: 2 };
             } else {
-                  return {
-                        transform: 'translateX(0) scale(0.7)',
-                        opacity: 0,
-                        zIndex: 1
-                  };
+                  return { transform: 'translateX(0) scale(0.7)', opacity: 0, zIndex: 1 };
             }
       };
 
-      // Calcular estatísticas totais
       const totalProjetos = projetos.length;
       const todasTechs = [...new Set(projetos.flatMap(p => p.techs))];
 
       return (
             <section id="projetos" className="section-padrao">
                   <div className="projetos-header">
-                        <h2 className="titulo-secao">Projetos</h2>
-                        <p className='subtitulo'>Confira alguns dos meus projetos mais recentes</p>
+                        <h2 className="titulo-secao">{t("projetos.titulo")}</h2>
+                        <p className='subtitulo'>{t("projetos.subtitulo")}</p>
                   </div>
 
                   <div className="projetos-layout">
@@ -158,7 +100,7 @@ function Projetos() {
                                                       key={index}
                                                       className={`dot ${index === currentIndex ? 'active' : ''}`}
                                                       onClick={() => setCurrentIndex(index)}
-                                                      aria-label={`Projeto ${index + 1}`}
+                                                      aria-label={`${t("projetos.projetosLabel")} ${index + 1}`}
                                                 />
                                           ))}
                                     </div>
@@ -193,13 +135,15 @@ function Projetos() {
                                     <p className="detalhes-descricao">{projetoAtivo.descricaoLonga}</p>
 
                                     <div className="features-section">
-                                          <h4>Features Principais</h4>
+                                          <h4>{t("projetos.featuresTitle")}</h4>
                                           <ul className="features-list">
                                                 {projetoAtivo.features.map((feature, index) => (
                                                       <li key={index}>
-                                                            <span className="feature-bullet"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning" viewBox="0 0 16 16">
-                                                                  <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641zM6.374 1 4.168 8.5H7.5a.5.5 0 0 1 .478.647L6.78 13.04 11.478 7H8a.5.5 0 0 1-.474-.658L9.306 1z" />
-                                                            </svg></span>
+                                                            <span className="feature-bullet">
+                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-lightning" viewBox="0 0 16 16">
+                                                                        <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641zM6.374 1 4.168 8.5H7.5a.5.5 0 0 1 .478.647L6.78 13.04 11.478 7H8a.5.5 0 0 1-.474-.658L9.306 1z" />
+                                                                  </svg>
+                                                            </span>
                                                             {feature}
                                                       </li>
                                                 ))}
@@ -207,7 +151,7 @@ function Projetos() {
                                     </div>
 
                                     <div className="tech-stack-section">
-                                          <h4>Tech Stack</h4>
+                                          <h4>{t("projetos.techStack")}</h4>
                                           <div className="tech-badges">
                                                 {projetoAtivo.techs.map((tech, i) => (
                                                       <span key={i} className="tech-badge-large">{tech}</span>
@@ -222,7 +166,7 @@ function Projetos() {
                                                       <polyline points="15 3 21 3 21 9"></polyline>
                                                       <line x1="10" y1="14" x2="21" y2="3"></line>
                                                 </svg>
-                                                Ver Site
+                                                {t("projetos.verSite")}
                                           </a>
                                           <a href={projetoAtivo.github} className="action-btn secondary">
                                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -233,16 +177,16 @@ function Projetos() {
                                     </div>
                               </div>
 
-                              {/* Status Gerais */}
+                              {/* Stats Gerais */}
                               <div className="stats-gerais">
                                     <div className="stat-box">
                                           <span className="stat-numero">{totalProjetos}</span>
-                                          <span className="stat-label">Projetos</span>
+                                          <span className="stat-label">{t("projetos.projetosLabel")}</span>
                                     </div>
                                     <div className="stat-divider"></div>
                                     <div className="stat-box">
                                           <span className="stat-numero">{todasTechs.length}</span>
-                                          <span className="stat-label">Tecnologias</span>
+                                          <span className="stat-label">{t("projetos.tecnologiasLabel")}</span>
                                     </div>
                                     <div className="stat-divider"></div>
                                     <div className="stat-box tech-cloud">

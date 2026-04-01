@@ -1,34 +1,22 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './components-styles/Sobre.css';
 
 function Sobre() {
+      const { t } = useTranslation();
+
       return (
             <section id="sobre" className="section-padrao">
-                  <h2 className="titulo-secao">Sobre Mim</h2>
+                  <h2 className="titulo-secao">{t("sobre.titulo")}</h2>
                   <div className="sobre-conteudo">
                         <div className="sobre-texto">
-                              <p>
-                                    Sou estudante de desenvolvimento web no <strong>SENAI</strong>, apaixonado por tecnologia e pela criação de experiências digitais modernas.
-                              </p>
-                              <p>
-                                    Atualmente estou focado em evoluir como desenvolvedor full-stack, desenvolvendo projetos práticos com JavaScript, React e Node.js.
-                              </p>
-                              <p>
-                                    Meu objetivo é criar aplicações que combinem design intuitivo, performance e boas práticas de desenvolvimento, gerando impacto real para usuários e empresas.
-                              </p>
+                              <p dangerouslySetInnerHTML={{ __html: t("sobre.p1") }} />
+                              <p>{t("sobre.p2")}</p>
+                              <p>{t("sobre.p3")}</p>
                               <div className="sobre-dados">
-                                    <div>
-                                          <span>1+</span>
-                                          <p>Ano de Estudo</p>
-                                    </div>
-                                    <div>
-                                          <span>10+</span>
-                                          <p>Projetos</p>
-                                    </div>
-                                    <div>
-                                          <span>SENAI</span>
-                                          <p>Formação</p>
-                                    </div>
+                                    <div><span>1+</span><p>{t("sobre.anoLabel")}</p></div>
+                                    <div><span>10+</span><p>{t("sobre.projetosLabel")}</p></div>
+                                    <div><span>SENAI</span><p>{t("sobre.formacaoLabel")}</p></div>
                               </div>
                         </div>
                   </div>

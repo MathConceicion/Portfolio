@@ -1,12 +1,3 @@
-:root {
-    --cor-primaria: #6366f1;
-    --cor-secundaria: #8b5cf6;
-    --cor-fundo: #0f172a;
-    --cor-fundo-card: #1e293b;
-    --cor-texto: #f1f5f9;
-    --cor-texto-secundario: #94a3b8;
-}
-
 .header {
     position: fixed;
     top: 0;
@@ -16,6 +7,23 @@
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid #818cf8;
+    color: #818cf8;
+    padding: 5px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    margin-left: 8px;
+}
+
+.lang-btn:hover {
+    background: #818cf8;
+    color: #fff;
 }
 
 .container {

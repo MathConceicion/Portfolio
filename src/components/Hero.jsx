@@ -1,27 +1,24 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './components-styles/Hero.css';
 
 function Hero() {
+      const { t } = useTranslation();
+
       return (
             <section id="inicio" className="hero">
                   <div className="hero-conteudo">
-                        <p className="hero-ola">Olá, eu sou Matheus!    </p>
-                        <h1>Estudante SENAI</h1>
-                        <h2>Desenvolvedor Web</h2>
-                        <p className="hero-descricao">
-                              Aprendendo a criar experiências digitais incríveis através do código.
-                        </p>
+                        <p className="hero-ola">{t("hero.ola")}</p>
+                        <h1>{t("hero.titulo")}</h1>
+                        <h2>{t("hero.subtitulo")}</h2>
+                        <p className="hero-descricao">{t("hero.descricao")}</p>
                         <div className="hero-botoes">
-                              <a href="#projetos" className="btn-primario">Ver Projetos</a>
-                              <a href="#contato" className="btn-secundario">Contato</a>
+                              <a href="#projetos" className="btn-primario">{t("hero.verProjetos")}</a>
+                              <a href="#contato" className="btn-secundario">{t("hero.contato")}</a>
                         </div>
                   </div>
                   <div className="hero-imagem">
-                        <img
-                              src="/minha-foto.jpg"
-                              alt="Minha foto"
-                              className="foto-perfil"
-                        />
+                        <img src="/minha-foto.jpg" alt="Matheus Conceicion" className="foto-perfil" />
                   </div>
             </section>
       );

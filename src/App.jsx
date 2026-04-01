@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Sobre from './components/Sobre';
@@ -17,46 +19,38 @@ import CircularText from './components/components-react/CircularText';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-function App() {
+const isMobile = window.innerWidth <= 768;
 
+function App() {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
   const [showName, setShowName] = useState(false);
   const [hideLoader, setHideLoader] = useState(false);
 
   useEffect(() => {
+    setTimeout(() => setShowName(true), 300);
+    setTimeout(() => setHideLoader(true), 2200);
+    setTimeout(() => setLoading(false), 3200);
 
-    // Loader
-    setTimeout(() => {
-      setShowName(true);
-    }, 300);
-
-    setTimeout(() => {
-      setHideLoader(true);
-    }, 2200);
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 3200);
-
-    // GSAP Context (melhor prática no React)
     let ctx = gsap.context(() => {
-
       ScrollSmoother.create({
         wrapper: "#smooth-wrapper",
         content: "#smooth-content",
-        smooth: 2,
-        effects: true,
+        smooth: isMobile ? 0 : 2,   // desabilitado no mobile
+        effects: !isMobile,          // sem efeitos no mobile
         normalizeScroll: true
       });
-
     });
 
     return () => ctx.revert();
-
   }, []);
 
   return (
     <>
+      <Helmet>
+        <title>{t("page.title")}</title>
+      </Helmet>
+
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <Header />
