@@ -10,10 +10,10 @@ function Projetos() {
       const projetosT = t("projetos.items", { returnObjects: true });
 
       const projetos = [
-            { ...projetosT[0], techs: ['HTML', 'C#'], imagem: './projects/projeto1.jpg', link: '#', github: 'https://github.com/MathConceicion/LandingPage.git', stats: { views: '-', likes: '-' } },
-            { ...projetosT[1], techs: ['HTML', 'CSS', 'JS'], imagem: './projects/projeto2.jpg', link: '#', github: 'https://github.com/MathConceicion/TaskMaster.git', stats: { views: '-', likes: '-' } },
-            { ...projetosT[2], techs: ['React', 'CSS'], imagem: './projects/projeto3.jpg', link: 'https://conceicionportfolio.vercel.app', github: 'https://github.com/MathConceicion/Portfolio', stats: { views: '-', likes: '-' } },
-            { ...projetosT[3], techs: ['HTML', 'CSS'], imagem: './projects/projeto4.jpg', link: 'https://projeto2-pearl-rho.vercel.app/index.html', github: 'https://github.com/MathConceicion/Projeto2', stats: { views: '-', likes: '-' } },
+            { ...projetosT[0], techs: ['HTML', 'C#'], imagem: './projects/projeto1.webp', link: '#', github: 'https://github.com/MathConceicion/LandingPage.git', stats: { views: '-', likes: '-' } },
+            { ...projetosT[1], techs: ['HTML', 'CSS', 'JS'], imagem: './projects/projeto2.webp', link: '#', github: 'https://github.com/MathConceicion/TaskMaster.git', stats: { views: '-', likes: '-' } },
+            { ...projetosT[2], techs: ['React', 'CSS'], imagem: './projects/projeto3.webp', link: 'https://conceicionportfolio.vercel.app', github: 'https://github.com/MathConceicion/Portfolio', stats: { views: '-', likes: '-' } },
+            { ...projetosT[3], techs: ['HTML', 'CSS'], imagem: './projects/projeto4.webp', link: 'https://projeto2-pearl-rho.vercel.app/index.html', github: 'https://github.com/MathConceicion/Projeto2', stats: { views: '-', likes: '-' } },
       ];
 
       const projetoAtivo = projetos[currentIndex];
